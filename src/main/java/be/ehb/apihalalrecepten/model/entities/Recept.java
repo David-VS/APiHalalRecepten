@@ -41,4 +41,12 @@ public class Recept {
     public void setScore(short score) {
         this.score = score;
     }
+
+    public Cook getCook() {
+        return cook;
+    }
+
+    public void setCook(Cook cook) {
+        this.cook = cook;
+    }
 }
