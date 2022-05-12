@@ -1,10 +1,7 @@
-package be.ehb.apihalalrecepten.model;
+package be.ehb.apihalalrecepten.model.entities;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Recept {
@@ -14,6 +11,9 @@ public class Recept {
     private int id;
     private String name;
     private short score;
+    @ManyToOne
+    @JoinColumn(name="cook_id", nullable = true)
+    private Cook cook;
 
     public Recept() {
     }

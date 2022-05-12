@@ -1,12 +1,9 @@
 package be.ehb.apihalalrecepten.controller;
 
-import be.ehb.apihalalrecepten.model.Recept;
-import be.ehb.apihalalrecepten.model.ReceptDao;
+import be.ehb.apihalalrecepten.model.entities.Recept;
+import be.ehb.apihalalrecepten.model.daos.ReceptDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/recepten")
@@ -33,5 +30,4 @@ public class ReceptenController {
 
         receptDao.save(toSave);
     }
-
 }
